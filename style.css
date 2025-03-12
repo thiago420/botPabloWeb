@@ -1,0 +1,188 @@
+html {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.principal {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 50px;
+}
+
+.imagem {
+    width: 150px;
+}
+
+
+.abrirCaixa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.abrirCaixa button {
+    width: 100px;
+}
+
+.item {
+    width: 200px; 
+    height: 200px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 15px;
+    position: relative;
+}
+
+.excluir {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    top: 5px;
+    right: 5px;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.excluir:hover {
+    background-color: rgba(255, 255, 255, 0.3)
+}
+
+#bodyModal {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#bodyModal3 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.btnOutro {
+    background-color: #f3f7fe;
+    color: #3b82f6;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    height: 45px;
+    transition: 0.3s;
+}
+
+.btnOutro.mostrar {
+    width: 120px;
+}
+
+.btnOutro.inv {
+    width: 140px;
+}
+
+.btnOutro:hover {
+    background-color: #3b82f6;
+    box-shadow: 0 0 0 5px #3b83f65f;
+    color: #fff;
+}
+
+.btnOutro.disabled {
+    opacity: 60%;
+}
+
+.btnOutro.disabled:hover {
+    background-color: #f3f7fe;
+    box-shadow: none;
+    color: #3b82f6;
+    cursor: default;
+}
+
+.outrosCaixa {
+    gap: 10px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.roleta {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    height: 100px;
+    width: 500px;
+    padding: 5px;
+    gap: 5px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #495057;
+}
+
+.roletaV {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 5px;
+    margin-left: 0;
+    transition: "all 8s cubic-bezier(.08,.6,0,1)"
+}
+
+.itemRoleta {
+    height: 80px;
+    width: 80px;
+    border-radius: 5px;
+    border: 1px solid #495057;
+    background-size: 95%;
+   	background-repeat: no-repeat;
+    background-position: center;
+}
+
+.seta {
+    position: fixed;
+    width: 3px;
+    height: 95px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: green;
+}
+
+#bodyModal2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
