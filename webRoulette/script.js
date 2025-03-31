@@ -1,4 +1,5 @@
 let id;
+let caixaRecebida;
 let elementoRecebido;
 
 async function prepararRoleta() {
@@ -6,12 +7,15 @@ async function prepararRoleta() {
     $('.roletaV').css({ transition: "" });
     $('.roletaV').css('margin-left', "0");
 
+    $('#imageCaixa').attr("src", caixaRecebida.image);
+    $('#nomeCaixa').html(caixaRecebida.name);
+
     link = "crates.json";
     const api = await fetch("https://bymykel.github.io/CSGO-API/api/en/" + link);
     const apiJson = await api.json();
 
     for (i = 0; i < apiJson.length; i++) {
-        if (apiJson[i].id === elementoRecebido.idCaixa) {
+        if (apiJson[i].id === caixaRecebida.id) {
             for (j = 0; j < 100; j++) {
                 if (j == 85) {
                     elemento = '<div id="CardNumber' + j + '" class="itemRoleta" style="background-image:url(' + (elementoRecebido.isRare ? "https://raw.githubusercontent.com/ByMykel/counter-strike-image-tracker/main/static/panorama/images/econ/weapon_cases/default_rare_item_png.png" : elementoRecebido.image) + '); border-bottom: 4px solid ' + (elementoRecebido.isRare ? "#ffd700" : elementoRecebido.rarity.color) + ';"></div>';
@@ -37,17 +41,19 @@ window.addEventListener("load", async () => {
         window.location.href = "error.html";
     }
 
+    caixaRecebida = {
+        id: apiJson.fields.idCaixa.stringValue,
+        name: apiJson.fields.nameCaixa.stringValue,
+        image: apiJson.fields.imageCaixa.stringValue,
+    }
+
     elementoRecebido = {
         id: apiJson.fields.id.stringValue,
-        idCaixa: apiJson.fields.idCaixa.stringValue,
         isRare: apiJson.fields.isRare.booleanValue,
         name: apiJson.fields.name.stringValue,
         rarity: {
-            id: apiJson.fields.rarity.mapValue.fields.id.stringValue,
-            name: apiJson.fields.rarity.mapValue.fields.name.stringValue,
             color: apiJson.fields.rarity.mapValue.fields.color.stringValue
         },
-        paint_index: apiJson.fields.paint_index.stringValue,
         image: apiJson.fields.image.stringValue
     };
 

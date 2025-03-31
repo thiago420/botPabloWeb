@@ -186,3 +186,13 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+.caixa-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.caixa-info img {
+    height: 120px;
+}
