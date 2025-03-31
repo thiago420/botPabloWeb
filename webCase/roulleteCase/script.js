@@ -80,7 +80,7 @@ async function abrirCaixa() {
 }
 
 function abrirModalItem() {
-    $("#bodyModal2").empty();
+    $("#bodyModal").empty();
 
     let div = document.createElement("div");
     div.className = "item";
@@ -98,7 +98,7 @@ function abrirModalItem() {
     div.appendChild(imagem);
     div.appendChild(texto);
 
-    $(div).appendTo("#bodyModal2");
+    $(div).appendTo("#bodyModal");
 
     $("#modalItem").modal("show");
 }

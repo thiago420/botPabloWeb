@@ -1,3 +1,5 @@
+AVISO: As informações estão desatualizadas e irão ser arrumados!
+
 # CS2 Discord Bot - Projeto Web
 
 Este repositório contém a parte Web do bot Pablo: com o **Inspect Redirector** e **Web Roulette**, ambos desenvolvidos para complementar as funcionalidade do bot de Discord que é voltado ao jogo Counter-Strike 2 (CS2).

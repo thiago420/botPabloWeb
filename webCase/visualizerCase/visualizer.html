@@ -10,16 +10,24 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <title>CS2 DISCORD BOT</title>
+    <script src='https://code.jquery.com/jquery-3.7.1.js' defer></script>
+    <script src="script.js" defer></script>
+    <title>Visualizar Caixa</title>
 </head>
 
 <body>
-    <h1>Ops... Algo deu errado!</h1>
-    <p>Se você está sendo redirecionado para está página, pode estar sendo ocorrido por algum destes motivos:</p>
-    <ul>
-        <li>Não especificou o ID</li>
-        <li>O ID especificado não é válido</li>
-        <li>O ID especificado expirou</li>
-    </ul>
+    <div>
+        <select onchange="pegarItensCaixa()" id="escolherCaixa" class="form-select" aria-label="Default select example">
+            <option value="null" selected>Escolha uma caixa...</option>
+        </select>
+    </div>
+    <div id="container">
+        <div id="caixa">
+            <img id="imageCaixa" src="" alt="imagem da caixa">
+            <h3 id="nameCaixa"></h3>
+        </div>
+        <div id="content"></div>
+    </div>
 </body>
+
 </html>
