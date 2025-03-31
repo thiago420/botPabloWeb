@@ -1,15 +1,14 @@
-AVISO: As informações estão desatualizadas e irão ser arrumados!
-
 # CS2 Discord Bot - Projeto Web
 
-Este repositório contém a parte Web do bot Pablo: com o **Inspect Redirector** e **Web Roulette**, ambos desenvolvidos para complementar as funcionalidade do bot de Discord que é voltado ao jogo Counter-Strike 2 (CS2).
+Este repositório contém a parte Web do bot Pablo, com o **Inspect Redirector**, **Web Case Roulette** e **Web Case Visualizer**, todos desenvolvidos para complementar as funcionalidades do bot de Discord voltado ao jogo Counter-Strike 2 (CS2).
 
 ## Estrutura do Projeto
 
-O projeto está organizado em duas pastas principais:
+O projeto está organizado em três pastas principais:
 
 1. **inspectRedirector/**: Responsável por redirecionar links do Discord para o jogo CS2.
-2. **webRoulette/**: Simulador de roleta para abrir caixas do CS2.
+2. **webCase/rouletteCase/**: Simulador de roleta para abrir caixas do CS2.
+3. **webCase/visualizerCase/**: Visualizador de itens de caixas do CS2.
 
 ---
 
@@ -31,14 +30,13 @@ O **Inspect Redirector** resolve uma limitação do Discord, que não permite ab
 
 ---
 
-## Web Roulette
+## Web Case Roulette
 
 ### Objetivo
-O **Web Roulette** é um simulador de roleta que permite aos usuários abrir caixas do CS2 de forma interativa.
+O **Web Case Roulette** é um simulador de roleta que permite aos usuários abrir caixas do CS2 de forma interativa.
 
 ### Estrutura
 - **`roulette.html`**: Página principal do simulador de roleta.
-- **`error.html`**: Página de erro exibida caso o ID fornecido seja inválido ou tenha expirado.
 - **`script.js`**: Script que gerencia a lógica da roleta e a interação com a API.
 - **`style.css`**: Estilização das páginas HTML.
 - **`assets/trash.svg`**: Ícone utilizado na interface.
@@ -49,3 +47,30 @@ O **Web Roulette** é um simulador de roleta que permite aos usuários abrir cai
 3. O usuário clica no botão "Abrir Caixa" para iniciar a roleta.
 4. Após o sorteio, o item obtido é exibido em um modal.
 5. O item é deletado da base de dados após ser aberto.
+
+---
+
+## Web Case Visualizer
+
+### Objetivo
+O **Web Case Visualizer** permite aos usuários visualizar os itens disponíveis em caixas do CS2.
+
+### Estrutura
+- **`visualizer.html`**: Página principal para visualizar os itens de uma caixa.
+- **`script.js`**: Script que gerencia a lógica de exibição dos itens.
+- **`style.css`** e **`style2.css`**: Estilização das páginas HTML.
+
+### Como Funciona
+1. O usuário seleciona uma caixa em um menu dropdown.
+2. A página consome uma API para buscar informações sobre os itens da caixa.
+3. Os itens são exibidos com suas respectivas imagens e raridades.
+
+---
+
+## Página Principal
+
+A página principal do projeto está localizada em **`index.html`**, que fornece links para as funcionalidades disponíveis:
+
+- **Inspect Redirector**
+- **Web Case Roulette**
+- **Web Case Visualizer**
