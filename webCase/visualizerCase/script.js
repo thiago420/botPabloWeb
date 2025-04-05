@@ -17,7 +17,7 @@ window.addEventListener("load", async () => {
     id = params.get("id");
 
     link = "crates.json";
-    const api = await fetch("https://bymykel.github.io/CSGO-API/api/en/" + link);
+    const api = await fetch("https://raw.githubusercontent.com/ByMykel/CSGO-API/main/public/api/en/" + link);
     const apiJson = await api.json();
 
     for (i = 0; i < apiJson.length; i++) {
@@ -39,7 +39,7 @@ window.addEventListener("load", async () => {
 
 async function pegarItensCaixa() {
     link = "crates.json";
-    const api = await fetch("https://bymykel.github.io/CSGO-API/api/en/" + link);
+    const api = await fetch("https://raw.githubusercontent.com/ByMykel/CSGO-API/main/public/api/en/" + link);
     const apiJson = await api.json();
 
     elemento = document.createElement("div");

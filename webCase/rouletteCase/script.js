@@ -11,7 +11,7 @@ async function prepararRoleta() {
     $('#nomeCaixa').html(caixaRecebida.name);
 
     link = "crates.json";
-    const api = await fetch("https://bymykel.github.io/CSGO-API/api/en/" + link);
+    const api = await fetch("https://raw.githubusercontent.com/ByMykel/CSGO-API/main/public/api/en/" + link);
     const apiJson = await api.json();
 
     for (i = 0; i < apiJson.length; i++) {
